@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--<title>Registration Form in HTML CSS</title>-->
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="stylelogin.css" />
+    <title>Registration page - YashRaj Agro centre</title>
+</head>
+
+<body style=>
+    <section class="container">
+        <header>Sign-up </header>
+        <form action="#" class="form">
+            <div class="column">
+                <div class="input-box">
+                    <label>First Name</label>
+                    <input type="text" placeholder="Enter first name" id="firstName" required />
+                </div>
+                <div class="input-box">
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Enter last name" id="lastName" required />
+                </div>
+            </div>
+
+
+            <div class="input-box">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter email address" id="emailId" required />
+            </div>
+            <div class="input-box">
+                <label>mobile NO</label>
+                <input type="number" placeholder="Enter Mobile No" id="mobileNo" required />
+            </div>
+
+
+
+
+            <div class="column">
+                <div class="input-box">
+                    <label>Set password</label>
+                    <input type="password" placeholder="set password" id="password" required />
+                </div>
+                <div class="input-box">
+                    <label>Re-enter password</label>
+                    <input type="text" placeholder="Re-enter password" id="Repass" required />
+                </div>
+            </div>
+
+
+            </div>
+
+            <div class="input-box address">
+
+                <div class="column">
+                    <div class="select-box" id="SecurityQ">
+                        <select>
+                <option hidden>Security Question</option>
+                <option>What is your favourite colour?</option>
+                <option>What is your school name?</option>
+                <option>what was your pet name ?</option>
+                <option>what is your fav uncle's name?</option>
+              </select>
+                    </div>
+                    <input type="text" placeholder="Answer" id="answer" required />
+                </div>
+
+            </div>
+            <button onclick="AddNewuser()">Submit</button>
+
+        </form>
+        <a href="loginNew.html"><button style="height: 55px;
+            width: 100%;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-top: 30px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: rgb(4, 237, 66);;
+            ">Already sign-up</button></a>
+    </section>
+</body>
+<script>
+    var firstNameElem = document.getElementById("firstName");
+    var lastNameElem = document.getElementById("lastName");
+    var emailElem = document.getElementById("emailId");
+    var mobileNoElem = document.getElementById("mobileNo");
+    var userNameElem = document.getElementById("userName");
+    var passwordElem = document.getElementById("password");
+    var RepassElem = document.getElementById("Repass");
+    var SecurityQElem = document.getElementById("SecurityQ");
+    var answerElem = document.getElementById("answer");
+
+
+    function adduser() {
+        var User = {
+            firstName: firstNameElem.value,
+            lastName: lastNameElem.value,
+            emailId: emailElem.value,
+            mobileNo: mobileNoElem.value,
+
+            userName: userNameElem.value,
+            password: passwordElem.value,
+            Repass: RepassElem.value,
+            SecurityQ: SecurityQElem.value,
+            answer: answerElem.value
+
+
+        };
+        fetch("http://localhost:4200/User/Register", {
+            method: "post",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(User)
+        }).then((response) => {
+            console.log(response);
+            alert('Registration Successful');
+            response.redirected();
+        }).catch(error => {
+            alert('try again')
+            console.error(error);
+        });
+    }
+</script>
+
+</html>

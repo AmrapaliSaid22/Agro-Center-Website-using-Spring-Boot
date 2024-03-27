@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page - YashRaj agro centre</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="showcase">
+        <div class="video-container">
+            <video src="RB22WB18RE291.mp4" autoplay muted loop id="myVideo"></video>
+        </div>
+    </div>
+    <div class="login-box">
+        <form action="">
+            <div class="user-box">
+                <h1 style="color: rgb(3, 95, 17);">YashRaj Agro Centre </h1>
+                <h4 style="margin-top: 3px; color: rgb(4, 169, 112);">We make Agriculture as better profession</h4>
+
+                <h3 style="color: white; margin-top: 15px;">UserName:</h3><br> <input type="text" placeholder="Enter Username" id="username" required=""><br>
+                <h3 style="color: white;"> Password:</h3>
+                <br> <input type="password" placeholder="Enter password" id="password" required=""><br>
+                <div style="align-items: center;">
+                    <a style="margin-bottom: 7px;" href="Forgotpassword.html">
+                        <h4>Forgot Password?</h4>
+                    </a>
+                    <a href="Home.html"><button style="width: 100%;
+                        color: #fff;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        margin-top: 30px;
+                        border: none;
+                        cursor: pointer;
+                        transition: all 0.2s ease;
+                        background: rgb(4, 237, 66);" onclick="adduser()">Login</button></a>
+
+                </div>
+            </div>
+        </form>
+        <a href="Registration.html"><button style="width: 100%;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-top: 30px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: rgb(4, 237, 66);" >New User?</button></a>
+    </div>
+
+</body>
+<script>
+    var UserNameElem = document.getElementById("username");
+    var PasswordElem = document.getElementById("password");
+
+
+    function adduser() {
+        var User = {
+            Username: UserNameElem.value,
+            password: empAgeElem.value
+
+        };
+        fetch("http://localhost:4200/User/login", {
+            method: "Get",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(User)
+        }).then((response) => {
+            console.log(response);
+            alert('Login Successful');
+            response.redirected();
+        }).catch(error => {
+            alert('try again')
+            console.error(error);
+        });
+    }
+</script>
+
+
+</html>

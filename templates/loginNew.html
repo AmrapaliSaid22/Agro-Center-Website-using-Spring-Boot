@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--<title>Registration Form in HTML CSS</title>-->
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="stylelogin.css" />
+    <title>login-yashraj Agro Centre </title>
+
+</head>
+
+<body>
+    <section class="container">
+        <header>Login-<span style="color: #adff2f;">Yashraj Agro Centre</span> </header>
+        <form action="#" class="form">
+
+
+
+
+            <div class="input-box">
+                <label>User Name</label>
+                <input type="text" placeholder="Enter your UserName" id="userName" required />
+            </div>
+            <div class="input-box">
+                <label>password</label>
+                <input type="password" placeholder="Enter Password " id="password" required />
+            </div>
+
+            <a href="forgotpassword.html">
+                <div>
+                    <h4>Forgot Password?</h4>
+                </div>
+            </a>
+
+
+
+            </div>
+
+
+            <a href="Homepage.html"><button >Login</button></a>
+
+        </form>
+        <a href="Registration.html"><button style="height: 55px;
+            width: 100%;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-top: 30px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: rgb(4, 237, 66);">New user?</button></a>
+    </section>
+</body>
+<script>
+    var UserNameElem = document.getElementById("userName");
+    var PasswordElem = document.getElementById("password");
+
+
+    function adduser() {
+        var User = {
+            Username: UserNameElem.value,
+            password: empAgeElem.value
+
+        };
+        fetch("http://localhost:4200/User/login", {
+            method: "Get",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(User)
+        }).then((response) => {
+            console.log(response);
+            alert('Login Successful');
+            response.redirected();
+        }).catch(error => {
+            alert('try again')
+            console.error(error);
+        });
+    }
+</script>
+
+
+</html>

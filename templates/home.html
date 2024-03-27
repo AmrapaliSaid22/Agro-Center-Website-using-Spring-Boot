@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage-Yashraj Agro Centre</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="stylehomepage.css">
+<!-- <style>
+                @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,400&display=swap');
+
+:root {
+    --green: #d7fba1;
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+span {
+    color: #5f803ba2;
+}
+
+*::selection {
+    background: var(--green);
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #3376226c;
+    z-index: 1000;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+header .logo {
+    margin-left: 3px;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #050505;
+    text-transform: uppercase;
+}
+
+header .logo span {
+    color: var(--green);
+    text-transform: uppercase;
+}
+
+header .navbar a {
+    color: black;
+    font-size: 2rem;
+    margin: 0.8rem;
+}
+
+header .navbar a:hover {
+    color: var(--green);
+}
+
+header .icons i {
+    font-size: 2.5rem;
+    color: black;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+header .icons i:hover {
+    color: var(--green);
+}
+
+header .search-bar-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 2rem;
+    background: #467303;
+    border-top: .1rem solid reba(255, 255, 255, 2);
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header .search-bar-container .active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+header .search-bar-container #search-bar {
+    width: 100%;
+    padding: 1rem;
+    text-transform: none;
+    color: #333;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+}
+
+header .search-bar-container label {
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 1.5rem;
+}
+
+header .search-bar-container label:hover {
+    color: var(--green);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 1.5rem 9%;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+}
+
+.home .content {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+
+.home .content h3 {
+    font-size: 1.7rem;
+    color: black;
+    text-transform: uppercase;
+    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+}
+
+.home .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.home .contols {
+    padding: 1rem;
+    border-radius: 5rem;
+    background: rgba(0, 0, 0, .3);
+    position: relative;
+    top: 10rem;
+}
+
+.home .contols .vdo-btn {
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    border-radius: 50%;
+    background: #ffff;
+    cursor: pointer;
+    margin: 0 .5rem;
+}
+
+.home .contols .vdo-btn.active {
+    background: var(--green);
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    width: 100%;
+    background-color: #65cb5ca2;
+    object-fit: cover;
+}
+
+.about .row .video-container {
+    flex: 1 1 40rem;
+    position: relative;
+    margin: 30px;
+}
+
+.about .row .video-container iframe {
+    width: 600px;
+    border: 1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    height: 500px;
+    object-fit: cover;
+}
+
+.about .row .video-container h3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background: #fff;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+.about .row .content {
+    flex: 1 1 40rem;
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.about .row .content p {
+    font-size: 2.1rem;
+    color: black;
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+.icons-container {
+    background: #65cb5ca2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.icons-container .icons {
+    background: #fff;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+}
+
+.icons-container .icons img {
+    height: 5rem;
+    margin-right: 2rem;
+}
+
+.icons-container .icons h3 {
+    color: #333;
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+}
+
+.icons-container .icons span {
+    color: #555;
+    font-size: 1.3rem;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    width: 100%;
+    background: #65cb5ca2;
+}
+
+.products {
+    margin: 10px;
+    background-color: #65cb5c7d;
+}
+
+.products .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    border: #050505;
+    gap: 1.5rem;
+}
+
+.products .box-container .box {
+    text-align: center;
+    border: var(--border);
+    padding: 2rem;
+    border: #050505;
+    box-shadow: 3px 5px 1px #0e0f0e;
+}
+
+.products .box-container .box:hover {
+    background-color: #03550e;
+}
+
+.products .box-container .box .icons a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    border: var(--border);
+    color: #fff;
+    margin: .3rem;
+}
+
+.products .box-container .box .icons a:hover {
+    background: #81cb5ca2;
+}
+
+.products .box-container .box .image {
+    padding: 2.5rem 0;
+}
+
+.products .box-container .box .image img {
+    height: 25rem;
+}
+
+.products .box-container .box .content h3 {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.products .box-container .box .content .stars {
+    padding: 1.5rem;
+}
+
+.products .box-container .box .content .stars i {
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+
+.products .box-container .box .content .price {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.products .box-container .box .content .price span {
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
+.products .button:hover {
+    background-color: #d7fba1;
+}
+
+.contact-container {
+    margin: 10px;
+    background-color: #65cb5ca2;
+    display: flex;
+}
+
+.contact-container .map {
+    margin: 20px;
+    box-shadow: #467303 3px;
+}
+
+.wrapper {
+    max-height: 230px;
+    /* border: 1px solid green; */
+    display: flex;
+    overflow-x: auto;
+}
+
+.wrapper::-webkit-scrollbar {
+    width: 0;
+}
+
+.wrapper .item {
+    min-width: 220px;
+    height: 230px;
+    line-height: 110px;
+    background-color: #65cb5ca2;
+    margin-right: 2px;
+    border: #03550e;
+    box-shadow: #050505;
+    align-items: center;
+}
+
+.blog-page {
+    height: 440px;
+    padding: 20px;
+    padding-left: 120px;
+    display: flex;
+    margin: 10px;
+    background-color: #65cb5ca2;
+}
+
+.blog-page .blog {
+    align-content: center;
+    padding-left: 90px;
+    padding-top: 40px;
+    border: 2px solid green;
+    margin: 10px;
+    height: 350px;
+    width: 400px;
+}
+
+.blog-page .blog:hover {
+    background-color: #37ac47;
+}
+
+.contact-container {
+    padding: 1%;
+    padding-left: 3%;
+}
+
+.contact-container .map {
+    width: 40%;
+}
+
+.contact-container .address {
+    margin-left: 13%;
+    text-align: center;
+    padding: 10px;
+    margin-top: 45px;
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background-color: #0f4808b4;
+}
+
+.footer .box-container .box {
+    flex: 1 1 25rem;
+    padding: 20px;
+    margin: 10px;
+}
+
+.footer .box-container .box h3 {
+    color: #060009;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+    display: block;
+    color: #000000;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a:hover {
+    color: var(--green);
+    text-decoration: underline;
+}
+
+.footer .box-container .box img {
+    margin-top: 1rem;
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: #333;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    padding-bottom: 9rem;
+}
+
+.footer .credit span {
+    color: var(--green);
+}
+
+@media (max-width:991px) {
+    html {
+        font-size: 50%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .home {
+        background-position: left;
+    }
+}
+
+@media (max-width:768px) {
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked.navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0, 0, 0, .1);
+        display: block;
+    }
+
+    .home .content h3 {
+        font-size: 5rem;
+    }
+
+    .home .content span {
+        font-size: 2.5rem;
+    }
+
+    .icons-container .icons h3 {
+        font-size: 2rem;
+    }
+
+    .icons-container .icons span {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+}
+</style> -->
+</head>
+
+<body>
+    <header>
+        <!-- <input type="checkbox" name="" id="toggler"> -->
+        <!-- <label for="toggle" class="fas fa-bars"></label> -->
+        <a hrref="#" class="logo"><span>Yashraj</span> Agro </a>
+        <nav class="navbar">
+            <a href="Homepage.html">Home</a>
+            <a href="AboutUs.html">About US</a>
+            <a href="photogallary.html">Photo Gallary</a>
+            <a href="#products">products</a>
+            <a href="contact.html">Contact US</a>
+            <a href="#Moreinfo">MoreInfo</a>
+
+        </nav>
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-heart" id="wishlist-btn"></i>
+            <i class="fas fa-shopping-cart" id="cart-btn"></i>
+        </div>
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here">
+            <label for="search-bar"></label>
+        </form>
+    </header>
+
+    <!-- home -->
+    <section class="home" id="home">
+        <div class="content">
+            <img style="width: 250px; height: 250px; opacity: 85%; border-radius: 1rem; filter:drop-shadow(2px 2px 2px black) " src="photos/logo.png" alt="">
+            <h3 style="margin: 4px; margin-top: 10px;">Revolutionizing agriculture with cutting-edge technology. </h3>
+        </div>
+
+
+        </div>
+        <div class="video-container">
+            <video src="photos/vdo1.mp4" id="video-sliders" loop autoplay muted></video>
+        </div>
+
+    </section>
+
+
+    <div style="margin: 10px;" class="about" id="about">
+        <section>
+            <h1 class="heading"><span>about</span>us </h1>
+        </section>
+        <div class="row">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/_DovoGDp3O0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+
+            </div>
+            <div class="content">
+                <h3>Few Things about us!</h3>
+                <p style="margin-right: 10px;">We Yashraj Agro centre working in agriculture field since more than 15 years. agriculture is not profitable with traditional method , we thought about applying modern method in my fields and see ....</p>
+                <a style="margin-left: 570px; font-size: 1.2rem;" href="#" class="btn">learn more</a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div style="margin: 10px;" class="icons-container">
+        <div class="icons">
+            <img style="opacity: 50%
+            ;" src="photos/icon-1.png" alt="">
+            <div class="info">
+                <h3>free delivery</h3>
+                <span>On All Delivery</span>
+
+            </div>
+        </div>
+
+
+        <div class="icons">
+            <img src="photos/icon-2.png" alt="">
+            <div class="info">
+                <h3>Easy Returns</h3>
+                <span>MoneyBack Gauntree</span>
+
+            </div>
+        </div>
+
+
+        <div class="icons">
+            <img src="photos/icon-3.png" alt="">
+            <div class="info">
+                <h3>Proper Guidance</h3>
+                <span>About soil and crop</span>
+
+            </div>
+        </div>
+
+
+        <div class="icons">
+            <img src="photos/icon-4.png" alt="">
+            <div class="info">
+                <h3>Quality Products</h3>
+                <span>worth Buying</span>
+
+            </div>
+        </div>
+    </div>
+    <section class="photo-gallary" id="photo-gallary">
+        <h1 class="heading"><span>Photo</span>Gallary </h1>
+    </section>
+    <div class="main1" style="display: flex;">
+        <div style=" display: flex;" class="adjust">
+            <div class="photo1">
+                <img style="height: 300px; width:450px; margin: 5px;" src="photos/photo3.jpg">
+            </div>
+            <div class="photo2">
+                <div class="photo2.1">
+                    <img style="height: 150px; width:200px; margin: 5px;" src="photos/photo4.jpg">
+                </div>
+                <div class="photo2.2">
+                    <img style="height: 135px; width:200px; margin: 5px;" src="photos/photo5.jpg">
+                </div>
+
+            </div>
+
+
+        </div>
+        <div style="display: flex;" class="phots">
+            <div>
+                <img style="height: 300px; width:450px; margin: 5px;" src="photos/photo6.jpg">
+            </div>
+            <div>
+                <img style="height: 150px; width: 300px; margin: 5px;" src="photos/photo10.jpg">
+                <img style="height: 130px; width:300px; margin: 5px;" src="photos/photo11.jpg">
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <div>
+        <div style="display: flex;" class="photo6">
+            <div class="photo6.1">
+                <img style="width: 673px;" src="photos/photo8.jpg">
+            </div>
+            <div>
+                <div style="display: flex;" class="photo6.2">
+                    <div>
+                        <img style="width: 300px; height: 170px; margin: 5px;" src="photos/photo7.jpg">
+                    </div>
+                    <div>
+                        <img style="width: 140px; height: 170px; margin: 5px;" src="photos/photo1.jpg">
+                    </div>
+
+
+                </div>
+                <div style="display: flex;">
+                    <div>
+                        <img style="width: 450px; height: 260px; margin: 5px;" src="photos/photo12.jpg">
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div>
+                <div>
+                    <img style=" margin: 5px;" src="photos/photo9.jpg">
+                </div>
+                <div>
+                    <img style="width: 300px; height: 260px; margin: 5px;" src="photos/photo13.jpg">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+    <section class="company">
+        <h1 class="heading"> Our <span>Distributors</span> </h1>
+    </section>
+    <div class="wrapper">
+        <div class="item"><img style="width: 200px; height:200px; margin-top: 6px; margin-left: 8px;" src="photos/dis1.png"></div>
+        <div class="item"><img style="width: 200px; height:100px; margin-top: 52px; margin-left: 8px;" src="photos/dis2.png"></div>
+        <div class="item"><img style="width: 200px; height:200px;margin-top: 6px; margin-left: 8px;" src="photos/dis3.png"></div>
+        <div class="item"><img style="width: 200px; height:100px;margin-top: 52px; margin-left: 8px;" src="photos/dis4.png"></div>
+        <div class="item"><img style="width: 200px; height:200px;margin-top: 6px; margin-left: 8px;" src="photos/dis5.png"></div>
+        <div class="item"><img style="width: 200px; height:200px;margin-top: 6px; margin-left: 8px;" src="photos/dis6.png"></div>
+
+        <div class="item"><img style="width: 200px; height:100px;margin-top: 52px; margin-left: 8px;" src="photos/dis8.png"></div>
+        <div class="item"><img style="width: 200px; height:100px;margin-top: 52px; margin-left: 8px;" src="photos/dis9.png"></div>
+
+        <div class="item"><img style="width: 200px; height:100px;margin-top: 52px; margin-left: 8px;" src="photos/dis10.png"></div>
+
+        <div class="item"><img style="width: 200px; height:100px;margin-top: 52px; margin-left: 8px;" src="photos/dis12.png"></div>
+
+    </div>
+
+
+    <section class="products" id="products">
+
+        <h1 class="heading"> Our Best Selling <span>Products</span> </h1>
+
+        <div style="margin: 10px;" class="box-container">
+
+            <div class="box">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+
+                </div>
+                <div class="image">
+                    <img style="width: 150px;" src="photos/product1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Nitrogen Fertilizer</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">Rs 350 <span>400</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+
+                </div>
+                <div class="image">
+                    <img src="photos/product2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Super Phosphate</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">Rs 500 <span>650</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+
+                </div>
+                <div class="image">
+                    <img src="photos/product3.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Amino nitrate</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">Rs 450 <span>589</span></div>
+                </div>
+            </div>
+
+        </div>
+        <div style="  margin:10px; padding: 10px;">
+            <a style="margin-left:1100px; "><button style="padding: 12px;border: 1px black;  width: 150px; background-color: green; color: aliceblue; font-size: 1.3rem;">See more...</button></a>
+        </div>
+
+    </section>
+    <section>
+        <h1 class="heading"> know about <span>techniques</span> </h1>
+
+
+    </section>
+    <div class="blog-page">
+        <div class="blog">
+            <img style="height: 200px; width: 200px;" src="photos/blog1.jpg">
+            <h2 style="margin: 10px; font-size: 1.8rem;">Mix Croping Techniques</h2>
+            <a href="https://www.frontiersin.org/articles/10.3389/fsufs.2020.00103/full"><button style="width: 200px; height: 30px;background-color:#1e411ba2 ;">READ MORE</button></a>
+
+
+        </div>
+        <div class="blog">
+            <img style="height: 200px; width: 200px;" src=" photos/blog2.jpg ">
+            <h2 style="margin: 10px; font-size: 1.6rem;">Sprays found on bollworms</h2>
+            <a href="https://www.lokmat.com/editorial/farmer-discovered-medicine-stop-bond-ali/ "><button style="width: 200px; height: 30px;background-color:#1e411ba2 ;">READ MORE</button></a>
+
+        </div>
+        <div class="blog ">
+            <img style="height: 200px; width: 200px; " src="photos/blog1.jpg ">
+            <h2 style="margin: 10px; font-size: 1.8rem;">Mix Croping Techniques</h2>
+            <a href="https://www.frontiersin.org/articles/10.3389/fsufs.2020.00103/full "><button style=" width: 200px; height: 30px;background-color:#1e411ba2;">READ MORE</button></a>
+
+        </div>
+
+
+
+
+    </div>
+
+    <section style="background-color: #65cb5ca2; text-align: center; margin: 10px;">
+        <h1>
+            <a href="blog.html">
+                <button style="font-size: 1.8rem; background: transparent;">see more ---></button>
+            </a>
+        </h1>
+    </section>
+
+
+
+
+    <section>
+        <h1 class="heading ">contact <span>US</span> </h1>
+
+    </section>
+    <div class="contact-container " style="padding: 1%; padding-left: 3%; ">
+        <div style="width: 40%; " class="map ">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2705.445598904527!2d76.90003094915618!3d20.213466730245944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd0ebf6ea9d368d%3A0x94e2d4ca1cab01b4!2sYashraj%20Agro%20Center!5e0!3m2!1sen!2sin!4v1679132837560!5m2!1sen!2sin "
+                width="600 " height="450 " style="border:0; " allowfullscreen=" " loading="lazy " referrerpolicy="no-referrer-when-downgrade "></iframe>
+        </div>
+        <div style="margin-left: 13%; text-align: center; padding: 10px; margin-top: 45px; " class="address ">
+
+            <h1 style="margin: 10px; ">CONTACT INFORMATION </h1>
+            <h2>--------------- ADDRESS ---------------</h2><br>
+            <h2> Yashraj Agro Center, Dongarkingi </h2><br>
+            <h2> Malegaon-Mehekar Highway,</h2><br>
+            <h2> At.po. Dongarkinhi, Tq. Malegaon, </h2><br>
+            <h2>Dist. Washim, Maharashtra 444503 </h2><br>
+            <h2>--------------- Phone Number ---------------</h2> <br>
+            <h2>xxxxxxxxxx xxxxxxxxxx</h2><br>
+            <h2>--------------- Email Address --------------- </h2><br>
+            <h2>yashrajagrocenter@gmail.com</h2><br>
+
+
+
+        </div>
+
+    </div>
+    <div style="margin: 10px; padding: 10px;" class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#">Home</a>
+                <a href="#">about</a>
+                <a href="#">product</a>
+                <a href="#">review</a>
+                <a href="#">contact us</a>
+
+            </div>
+            <div class="box">
+                <h3>Your Favourite</h3>
+                <a href="#">My Account</a>
+                <a href="#">Wishlist</a>
+                <a href="#">My order</a>
+                <a href="#">recently viewed</a>
+                <a href="#">popular orders</a>
+
+
+            </div>
+            <div class="box">
+                <h3>Locations</h3>
+                <a href="#">Pune</a>
+                <a href="#">Mumbai</a>
+                <a href="#">Beed</a>
+                <a href="#">Satara</a>
+                <a href="#">Nashik</a>
+            </div>
+            <div class="box">
+                <h3>Contact us</h3>
+                <a href="#">123-456-789</a>
+                <a href="#">Flowersshop@gmail.com</a>
+                <a href="#">JM Road ,pune</a>
+                <div class="image">
+                    <img src="photos/payment.png" alt="">
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script src="script.js ">
+    </script>
+</body>
+
+</html>

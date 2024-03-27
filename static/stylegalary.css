@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,400&display=swap');
+:root {
+    --green: #d7fba1;
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+span {
+    color: #5f803ba2;
+}
+
+*::selection {
+    background: var(--green);
+    color: #fff;
+}
+
+.heading {
+    padding: 10px;
+    margin-top: 80px;
+    text-align: center;
+    font-size: 1.8rem;
+    background-color: #65cb5ca2;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #3376226c;
+    z-index: 1000;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+header .logo {
+    margin-left: 3px;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #050505;
+    text-transform: uppercase;
+}
+
+header .logo span {
+    color: var(--green);
+    text-transform: uppercase;
+}
+
+header .navbar a {
+    color: black;
+    font-size: 2rem;
+    margin: 0.8rem;
+}
+
+header .navbar a:hover {
+    color: var(--green);
+}
+
+header .icons i {
+    font-size: 2.5rem;
+    color: black;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+header .icons i:hover {
+    color: var(--green);
+}
+
+header .search-bar-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 2rem;
+    background: #467303;
+    border-top: .1rem solid reba(255, 255, 255, 2);
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header .search-bar-container .active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+header .search-bar-container #search-bar {
+    width: 100%;
+    padding: 1rem;
+    text-transform: none;
+    color: #333;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+}
+
+header .search-bar-container label {
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 1.5rem;
+}
+
+header .search-bar-container label:hover {
+    color: var(--green);
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background-color: #0f4808b4;
+    margin: 10px;
+    padding: 10px;
+}
+
+.footer .box-container .box {
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3 {
+    color: #000000;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+    display: block;
+    color: #000000;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a:hover {
+    color: var(--green);
+    text-decoration: underline;
+}
+
+.footer .box-container .box img {
+    margin-top: 1rem;
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: #333;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    padding-bottom: 9rem;
+}
+
+.footer .credit span {
+    color: var(--green);
+}
